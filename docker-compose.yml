@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  studyxx:
+    image: miniers/study_xxqg
+    restart: always
+    container_name: study_xxqg
+    volumes:
+      - ./config:/config
+      - ./cache:/root/.cache
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "2"
